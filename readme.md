@@ -23,6 +23,7 @@
 - Gin
 - Prometheus
 - Otel
+- Jaeger
 - Consul
 
 ---
