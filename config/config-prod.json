@@ -1,0 +1,51 @@
+{
+  "apiVersion": "v1",
+  "appName": "email",
+  "listenPort": ":52000",
+  "kubernetesServiceNameSuffix": "svc",
+  "secondsToReloadServicesName": 15,
+  "folders": [
+    "certs"
+  ],
+  "certificates": {
+    "foldername": "certs",
+    "filenamecert": "localhost.crt",
+    "filenamekey": "localhost.key",    
+    "serviceName":"authentication",
+    "apiPathCertificateCA": "api/v1/download/cacert",
+    "apiPathCertificateHost": "api/v1/download/cert",
+    "apiPathCertificateHostKey": "api/v1/download/cert-key",
+    "minutesToReloadCertificate": 1
+  },
+  "company": {
+    "name": "My Company",
+    "address": "Av. Paulista",
+    "addressNumber": "1912",
+    "addressComplement": "Sl 9876",
+    "locality": "São Paulo",
+    "country": "Brazil",
+    "postalCode": "01310-924",
+    "phone": "+55 11 222 333",
+    "email": "contact@mycompany.com"
+  },
+  "smtpServer": {
+    "host": "mailhog-smtp-svc",
+    "port": 1025,
+    "tls": false,
+    "supportEmail": "support@mycompany.com"
+  },
+  "jaeger": {
+    "jaegerEndpoint": "http://jaeger-collector-svc:14268/api/traces",
+    "serviceName": "email",
+    "serviceVersion": "1.0.0"
+  },
+  "grpcServer": {
+    "port": ":53000",
+    "maxConnectionIdle": 5,
+    "maxConnectionAge": 5,
+    "timeout": 15
+  },
+  "consul": {
+    "host": "consul-svc:8500"
+  }
+}

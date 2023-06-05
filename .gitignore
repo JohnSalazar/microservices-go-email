@@ -1,0 +1,4 @@
+.vscode
+.docker
+certs
+.env
