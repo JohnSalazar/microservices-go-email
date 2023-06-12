@@ -4,10 +4,10 @@ import (
 	"context"
 	"log"
 
+	common_proto "github.com/JohnSalazar/microservices-go-common/grpc/email/client"
+	common_services "github.com/JohnSalazar/microservices-go-common/services"
+	trace "github.com/JohnSalazar/microservices-go-common/trace/otel"
 	"github.com/go-playground/validator/v10"
-	common_proto "github.com/oceano-dev/microservices-go-common/grpc/email/client"
-	common_services "github.com/oceano-dev/microservices-go-common/services"
-	trace "github.com/oceano-dev/microservices-go-common/trace/otel"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

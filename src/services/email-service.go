@@ -9,8 +9,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/oceano-dev/microservices-go-common/config"
-	trace "github.com/oceano-dev/microservices-go-common/trace/otel"
+	"github.com/JohnSalazar/microservices-go-common/config"
+	trace "github.com/JohnSalazar/microservices-go-common/trace/otel"
 	mail "github.com/xhit/go-simple-mail/v2"
 )
 

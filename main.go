@@ -12,20 +12,20 @@ import (
 	"syscall"
 	"time"
 
+	grpc_proto "github.com/JohnSalazar/microservices-go-common/grpc"
+	common_grpc_client "github.com/JohnSalazar/microservices-go-common/grpc/email/client"
+	"github.com/JohnSalazar/microservices-go-common/helpers"
+	"github.com/JohnSalazar/microservices-go-common/httputil"
 	grpc_prometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
-	grpc_proto "github.com/oceano-dev/microservices-go-common/grpc"
-	common_grpc_client "github.com/oceano-dev/microservices-go-common/grpc/email/client"
-	"github.com/oceano-dev/microservices-go-common/helpers"
-	"github.com/oceano-dev/microservices-go-common/httputil"
 
-	"github.com/oceano-dev/microservices-go-common/config"
-	common_security "github.com/oceano-dev/microservices-go-common/security"
-	common_services "github.com/oceano-dev/microservices-go-common/services"
-	common_tasks "github.com/oceano-dev/microservices-go-common/tasks"
-	provider "github.com/oceano-dev/microservices-go-common/trace/otel/jaeger"
+	"github.com/JohnSalazar/microservices-go-common/config"
+	common_security "github.com/JohnSalazar/microservices-go-common/security"
+	common_services "github.com/JohnSalazar/microservices-go-common/services"
+	common_tasks "github.com/JohnSalazar/microservices-go-common/tasks"
+	provider "github.com/JohnSalazar/microservices-go-common/trace/otel/jaeger"
 
+	common_consul "github.com/JohnSalazar/microservices-go-common/consul"
 	consul "github.com/hashicorp/consul/api"
-	common_consul "github.com/oceano-dev/microservices-go-common/consul"
 )
 
 type Main struct {
